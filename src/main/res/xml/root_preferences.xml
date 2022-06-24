@@ -1,0 +1,41 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:layout_margin="10dp"
+        app:title="@string/Profile">
+
+
+        <EditTextPreference
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:key="signature"
+            app:title="Name "
+            app:useSimpleSummaryProvider="false" />
+        <EditTextPreference
+            android:defaultValue="false"
+            android:key="edit_text_preference_1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Password" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="General">
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/reply_entries"
+            android:entryValues="@array/reply_values"
+            android:key="list_preference_1"
+            android:title="List preference" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/notifications">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="switch_preference_1"
+            android:title="Mute it" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
